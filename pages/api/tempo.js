@@ -12,6 +12,8 @@ async function tempo(request, response) {
     const dynamicDateFim = new Date();
     const msFim = dynamicDateFim.getMilliseconds();
 
+    response.setHeader('Cache-Control', 's-maxage=10, stale-while-revalidate')
+
     response.json({
         Data_Inicio: dynamicDate.toUTCString(),
         ms_Inicio: msInicio,
