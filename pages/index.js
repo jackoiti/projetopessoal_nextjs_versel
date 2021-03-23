@@ -1,11 +1,17 @@
+import Link from 'next/link';
 import {useState} from 'react';
-
+    
 function Home(){
     return (
         <div>
             <h2>Home</h2>
             <Contador />
-            <div><br></br>Teste</div>
+            <br></br>
+            <Link href="/sobre">
+                <a>Acessar página Sobre</a>
+            </Link>
+            <br></br>
+            <div>Teste</div>
         </div>
     )
 }
@@ -23,5 +29,6 @@ function Contador () {
         </div>
     )
 }
+
 
 export default Home
